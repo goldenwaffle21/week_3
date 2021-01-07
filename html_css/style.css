@@ -1,0 +1,10 @@
+/* external < user < browser < internal < inline /*
+/*reset or normalize?*/
+
+* {
+    box-sizing: border-box;
+}
+
+.col-1 {
+    width : 8.33%;
+}

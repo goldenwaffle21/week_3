@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">    <!--lang determines how the code reads things like dates-->
+<head>
+    <meta charset="UTF-8">    <!--contains just about every character under the sun-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Now that we have this metadata, responsive CSS design is possible-->
+    <title>Document</title>    <!--Differentiates between tabs-->
+    
+    <link rel="stylesheet" href="style">
+</head>
+<body>
+
+    <header>
+        <h1>PizzaCo</h1>
+        <nav>
+            <a href="http://">Menu</a>
+            <a href="http://">Drinks</a>
+            <a href="http://">About Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <header>
+                <h2>Customize Your Pizza!</h2>
+                <h3>Any topping under the sun!</h3>
+            </header>
+            <!--In Emmet, you can create child elements along with their parent with 
+                [parent]>[child]*[#children]. In this case, ul>li*5>img-->
+            <ul>
+                <li>
+                    <figure>
+                        <img src="http://placekitten.com/200/300" alt="pizza with extra extra Pineapples"></li>
+                        <figcaption>Pineapples!</figcaption>
+                    </figure>
+                <li>
+                    <figure>
+                        <img src="http://placekitten.com/200/300" alt="pizza with extra extra Mushrooms">
+                        <figcaption>Mushrooms!</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="http://placekitten.com/200/300" alt="pizza with extra extra Calamari">
+                        <figcaption>Calamari!</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="http://placekitten.com/200/300" alt="pizza with extra extra Curry Powder">
+                        <figcaption>Gold Dust?!</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="http://placekitten.com/200/300" alt="pizza with extra extra ?!?!?!">
+                        <figcaption>I don't even know! But we've got it!</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <header>
+                <h2>Place Order</h2>
+            </header>
+
+            <form action="">
+                <section>
+                    <!--stores    input[type=radio name=store id="" value=""]*3+label-->
+                    <!--Not a dropdown because that requires an additional click and maybe scrolling;
+                    this is all displayed at once, and having the same name + type="radio" makes it 
+                    so you can only choose one and makes it obvious which you've picked-->
+                    <h3>Pick a Store</h3>
+                    <!--input first, label second by convention.-->
+                    <input type="radio" name="store" id="store1" value="store1">
+                    <label for="store1">Store #1</label>
+                    <input type="radio" name="store" id="store2" value="store2">
+                    <label for="store2">Store #2</label>
+                    <input type="radio" name="store" id="store3" value="store3">
+                    <label for="store3">Store #3</label>
+                </section>
+
+                <section>
+                    <h3>Pick Pizzas</h3>
+                    <section>
+                        <!--Note: use JS to prefill toppings based on base.-->
+                        <!--Question: put JS here or in Toppings? Probably here, after each input.-->
+                        <h4>Pizza #1</h4>
+                        <h5>Base</h5>
+                        <input type="radio" name="base" id="custom" value="custom" checked>    <!--default-->
+                        <label for="custom">Custom</label>
+                        <input type="radio" name="base" id="cheese" value="cheese">
+                        <label for="cheese">Cheese Pizza (cheese, with tomato sauce)</label>
+                        <input type="radio" name="base" id="hawaiian" value="hawaiian">
+                        <label for="">Hawaiian Pizza (cheese, ham, & pineapple, with tomato sauce)</label>
+                        <input type="radio" name="base" id="meat" value="meat">
+                        <label for="meat">Meat Pizza (cheese, ham, pepperoni, & sausage, with tomato sauce)</label>
+                        <input type="radio" name="base" id="pesto" value="pesto">
+                        <label for="pesto">Pesto Pizza (artichoke hearts, cheese, feta, garlic, & mushrooms, with pesto sauce</label>
+                    </section>
+                    
+                    <section>
+                        <h5>Size</h5>
+                        <input type="radio" name="size" id="small" value="small">
+                        <label for="small">Small</label>
+                        <input type="radio" name="size" id="medium" value="medium" checked>
+                        <label for="medium">Medium</label>
+                        <input type="radio" name="size" id="large" value="large">
+                        <label for="large">Large</label>
+                    </section>
+                    <section>
+                        <h5>Crust</h5>
+                        <input type="radio" name="crust" id="regular" value="regular" checked>
+                        <label for="regular">Regular</label>
+                        <input type="radio" name="crust" id="deep dish" value="deep dish">
+                        <label for="deep dish">Deep Dish</label>
+                        <input type="radio" name="crust" id="stuffed" value="stuffed">
+                        <label for="stuffed">Stuffed</label>
+                        <input type="radio" name="crust" id="thin" value="thin">
+                        <label for="thin">Thin</label>
+                        
+                        <input type="checkbox" name="gluten free" id="gluten free" value="gluten free">
+                        <label for="gluten free">gluten free</label>
+                        <!--gluten free; checkbox type-->
+                    </section>
+
+                    <section>
+                        <h5>Toppings</h5>
+                        <!--Note: use JS to prefill based on base.-->
+                        <!--Note: if type="checkbox", the checked attribute makes the input checked by
+                        default; potentially usefull for prefilling with JS.-->
+                        <!--Question: put JS here or in Base? Probably Base.-->
+                        
+                        display toppings
+
+                        input toppings
+                        <!--this is a collection, and so will use a plural name.-->
+                        <!--Note: refine "extra" determination-->
+                    </section>
+                        
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="quantity" min="0">
+
+                    <p>Price: $</p>    <!--display price-->
+
+                    remove this pizza (just clear if it's the only one?)
+                </section>
+                add pizza
+                display total price
+                user info (partially prefilled if signed in)
+                
+                <!--submit/pay or cancel-->
+                <button type="submit">Place Order</button>
+                <button type="reset">Cancel Order</button>
+            </form>
+        </section>
+        
+        <section></section>
+    </main>
+
+    <footer>
+        <small>Copyright &copy; 2021 Elliot Reid (aka goldenwaffle21, aka PoeticallyPsychotic, aka dreadpirate7)</small>
+        <!--Denotes text that is not as important, or rather, not supposed to take as much
+            attention (as in "read the small print before you sign").
+            Also literally smaller by default.-->
+    </footer>
+    
+</body>
+</html>
